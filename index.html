@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display|Karla&display=swap" rel="stylesheet">
+    <link href="styles/output.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"
+        integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+        font-family: 'Karla', sans-serif;
+    }
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: hsl(228, 39%, 23%);
+    }
+
+    .mySlides {
+        display: none;
+    }
+
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+</style>
+
+<body class="m-0 p-0 text-lg text-primary-200">
+    <header class="sm:flex sm:flex-row">
+        <nav
+            class="flex flex-row justify-between items-start py-6 px-5 relative sm:items-center sm:justify-around sm:w-full">
+            <img src="./images/logo.svg" aria-label="Manage logo" alt="Manage logo">
+            <div
+                class="hidden sm:flex flex flex-col justify-center items-center shadow-lg border absolute w-10/12 h-56 ml-2 my-10 opacity-100 bg-white sm:items-baseline sm:flex-row sm:m-0 sm:h-auto sm:w-2/5 sm:border-transparent sm:relative sm:shadow-none">
+                <a href="" aria-label="Pricing" class="mt-2 sm:mt-0 sm:mr-3 hover:text-neutral-100">Pricing</a>
+                <a href="" aria-label="Product" class="mt-2 sm:m-0 sm:mr-3 hover:text-neutral-100">Product</a>
+                <a href="" aria-label="About Us" class="mt-2 sm:m-0 sm:mr-3 hover:text-neutral-100">About Us</a>
+                <a href="" aria-label="Careers" class="mt-2 sm:m-0 sm:mr-3 hover:text-neutral-100">Careers</a>
+                <a href="" aria-label="Community" class="mt-2 sm:m-0 hover:text-neutral-100">Community</a>
+            </div>
+            <img src="./images/icon-hamburger.svg" aria-label="mobile nav" class="sm:hidden ham">
+            <img src="./images/icon-close.svg" aria-label="mobile nav close" class="hidden close">
+            <button
+                class="hidden sm:block sm:w-32 sm:bg-primary-100 sm:p-2 sm:rounded-full sm:text-base sm:text-neutral-400 sm:shadow-2xl hover:bg-red-400">
+                <a href="" aria-label="Get Started">Get Started</a>
+            </button>
+        </nav>
+    </header>
+    <section class="flex flex-col-reverse sm:flex-row sm:pt-12">
+        <div
+            class="flex flex-col justify-center items-center text-center sm:w-1/2 sm:justify-start sm:items-start sm:pt-12">
+            <h1 class="text-4xl leading-tight font-bold font-sans sm:text-5xl sm:text-left sm:pl-24 sm:pr-20">Bring
+                everyone together to build better products.</h1>
+            <p class="p-2 text-base text-neutral-100 sm:text-left sm:pl-24 sm:pr-56 sm:pt-6">Manage makes it simple for
+                software teams to plan day-to-day tasks while keeping the larger
+                team goals in view.
+            </p>
+            <button
+                class="bg-primary-100 w-32 h-12 p-2 rounded-full text-base text-neutral-400 my-5 shadow-2xl sm:ml-24 hover:bg-red-400">
+                <a href="" aria-label="Get Started">Get Started</a>
+            </button>
+        </div>
+        <div class="p-2 w-full object-cover object-center sm:w-1/2">
+            <img src="./images/illustration-intro.svg" aria-label="intro graph" alt="89.74% graph">
+        </div>
+    </section>
+    <section class="flex flex-col justify-center items-center text-center pt-5 sm:pt-8 sm:flex-row sm:items-baseline">
+        <div class="sm:flex-col sm:w-1/2 sm:text-left sm:pl-24">
+            <h2 class="leading-tight text-3xl font-bold font-sans sm:text-4xl sm:pr-12 ">What's different about Manage?
+            </h2>
+            <p class="my-3 p-2 text-base text-neutral-100 sm:p-0 sm:pt-3 sm:pr-64 sm:leading-normal">Manage provides all
+                the functionality your team needs, without the complexity.
+                Our software is tailor-made for modern digital product teams.
+            </p>
+        </div>
+        <div class="sm:w-1/2 sm:flex-col">
+            <div class="text-left flex flex-col justify-start items-start my-4">
+                <div class="flex flex-row w-full pl-1">
+                    <h3 class="bg-neutral-300 font-semibold w-full sm:bg-white">
+                        <span class="inline-block bg-primary-100 text-white text-center text-xl w-14 p-1 rounded-full">
+                            01
+                        </span>
+                        <span class="sm:ml-4">Track company-wide progress</span></h3>
+                </div>
+                <p class="my-3 px-2 text-base text-neutral-100 sm:pl-20 sm:pr-32 sm:text-lg">See how your day-to-day
+                    tasks fit into the wider vision.
+                    Go from tracking progress at the milestone level all the way down to the smallest details.
+                    Never lose sight of the bigger picture again.
+                </p>
+                <div class="flex flex-row w-full pl-1">
+                    <h3 class="bg-neutral-300 font-semibold w-full sm:bg-white">
+                        <span class="inline-block bg-primary-100 text-white text-center text-xl w-14 p-1 rounded-full">
+                            02
+                        </span>
+                        <span class="sm:ml-4">Advanced built-in reports</span></h3>
+                </div>
+                <p class="my-3 px-2 text-base text-neutral-100 sm:pl-20 sm:pr-32 sm:text-lg">Set internal delivery
+                    estimates and track progress toward company goals.
+                    Our customisable dashboard helps you build out the reports you need to
+                    keep key stakeholders informed.
+                </p>
+                <div class="flex flex-row w-full pl-1">
+                    <h3 class="bg-neutral-300 font-semibold w-full sm:bg-white">
+                        <span
+                            class="inline-block bg-primary-100 text-white text-center text-xl w-14 p-1 rounded-full">03
+                        </span>
+                        <span class="sm:ml-4">Everything you need in one place</span></h3>
+                </div>
+                <p class="my-3 px-2 text-base text-neutral-100 sm:pl-20 sm:pr-32 sm:text-lg">Stop jumping from one
+                    service to another to communicate, store files,
+                    track tasks and more. Manage offers an all-in-one team productivity solution.</p>
+            </div>
+        </div>
+    </section>
+    <section class="text-center">
+        <h1 class="my-2 text-3xl font-bold font-sans sm:text-4xl sm:my-3">What they've said</h1>
+        <div class="sm:flex sm:flex-row sm:justify-center sm:items-center slideshow-container">
+            <i class="fas fa-arrow-circle-left text-3xl -mr-2 z-50 text-primary-200 sm:block prev"
+                onclick="plusSlides(-1)"></i>
+            <div
+                class="my-10 flex flex-col justify-center items-center sm:my-20 sm:p-2 sm:w-1/2 sm:h-56 sm:bg-neutral-400 sm:shadow-inner mySlides fade">
+                <img src="./images/avatar-anisha.png" aria-label="anisha testimonial" alt="Anisha Li"
+                    class="object-center object-cover overflow-hidden w-20 sm:-mt-24 sm:overflow-visible sm:relative">
+                <h3 class="text-xl font-bold font-sans my-2">Anisha li</h3>
+                <p class="text-base px-3 sm:px-20">"Manage has supercharged our team's workflow. The ability to
+                    maintain
+                    visibility on larger
+                    milestones at all times keeps everyone motivated."
+                </p>
+            </div>
+            <div
+                class="my-10 flex flex-col justify-center items-center sm:w-1/2 sm:my-20 sm:p-2 sm:h-56 sm:bg-neutral-400 sm:shadow-inner mySlides fade">
+                <img src=" ./images/avatar-ali.png" aria-label="ali testimonial" alt="Ali Bravo"
+                    class="object-center object-cover overflow-hidden w-20 sm:overflow-visible sm:-mt-24 sm:relative">
+                <h3 class="text-xl font-bold font-sans my-2">Ali Bravo</h3>
+                <p class="text-base px-3 sm:px-20">"We have been able to cancel so many other subscriptions
+                    since using
+                    Manage. There is no more
+                    cross-channel
+                    confusion and everyone is much more focused."
+                </p>
+            </div>
+            <div
+                class="my-10 flex flex-col justify-center items-center sm:w-1/2 sm:my-20 sm:p-2 sm:h-56 sm:bg-neutral-400 sm:shadow-inner mySlides fade">
+                <img src="./images/avatar-richard.png" aria-label="richard testimonial" alt="Richard Watts"
+                    class="object-center object-cover overflow-hidden w-20 sm:overflow-visible sm:-mt-24 sm:relative">
+                <h3 class="text-xl font-bold font-sans my-2">Richard Watts</h3>
+                <p class="text-base px-3 sm:px-20">"Manage allows us to provide structure and process. It keeps
+                    us
+                    organized and focused. I can't stop
+                    recommending them to everyone I talk to!"
+                </p>
+            </div>
+            <div
+                class="mt-10 mb-5 flex flex-col justify-center items-center sm:w-1/2 sm:my-20 sm:p-2 sm:h-56 sm:bg-neutral-400 sm:shadow-inner mySlides fade">
+                <img src="./images/avatar-shanai.png" aria-label="shanai testimonial" alt="Shanai Gough"
+                    class="object-center object-cover overflow-hidden w-20 sm:overflow-visible sm:-mt-24 sm:relative">
+                <h3 class="text-xl font-bold font-sans my-2">Shanai Gough</h3>
+                <p class="text-base px-3 sm:px-20">"Their software allows us to track, manage and collaborate on
+                    our
+                    projects from anywhere.
+                    It keeps the whole team in-sync without being intrusive."
+                </p>
+            </div>
+            <i class="fas fa-arrow-circle-right text-3xl -ml-2 z-50 text-primary-200 sm:block next"
+                onclick="plusSlides(1)"></i>
+        </div>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <button
+            class="bg-primary-100 w-32 h-12 p-2 rounded-full text-base text-neutral-400 my-5 shadow-2xl hover:bg-red-400">
+            <a href="" aria-label="Get Started">Get Started</a>
+        </button>
+    </section>
+    <section
+        class="flex flex-col justify-center items-center py-10 mt-3 bg-primary-100 text-neutral-400 sm:flex-row sm:justify-around">
+        <h1 class="text-4xl font-semibold text-center px-4 sm:w-1/3 sm:text-left sm:font-bold">Simplify how your team
+            works today.</h1>
+        <button
+            class="bg-neutral-400 w-32 h-12 p-2 rounded-full text-primary-100 font-semibold text-base my-5 shadow-2xl hover:text-red-400">
+            <a href="" aria-label="Get Started">Get Started</a>
+        </button>
+    </section>
+    <footer class="bg-neutral-200 py-4 flex flex-col-reverse sm:flex-row sm:justify-evenly sm:items-center sm:p-4">
+        <div class="flex flex-col-reverse justify-center items-center sm:flex-col sm:mt-8 sm:mr-32">
+            <img src="./images/logo-white.svg" alt="Manage logo" aria-label="Manage logo"
+                class="mt-2 mb-4 w-40 object-cover object-center">
+            <div class="flex flex-row w-full justify-evenly items-center my-5 sm:mt-10 sm:ml-3 borders">
+                <img src="./images/icon-facebook.svg" aria-label="facebook" alt="facebook"
+                    class="w-8 object-cover object-center sm:mr-4">
+                <img src="./images/icon-youtube.svg" aria-label="youtube" alt="youtube"
+                    class="w-8 object-cover object-center sm:mr-4">
+                <img src="./images/icon-twitter.svg" aria-label="twitter" alt="twitter"
+                    class="w-8 object-cover object-center sm:mr-4">
+                <img src="./images/icon-pinterest.svg" aria-label="pinterest" alt="pinterest"
+                    class="w-8 object-cover object-center sm:mr-4">
+                <img src="./images/icon-instagram.svg" aria-label="instagram" alt="instagram"
+                    class="w-8 object-cover object-center">
+            </div>
+        </div>
+        <div class="flex justify-around items-baseline">
+            <div class="flex flex-col text-neutral-400 sm:mr-16 ml-0">
+                <a href="" aria-label="Home" class="hover:text-primary-100">Home</a>
+                <a href="" aria-label="Pricing" class="sm:mt-1 hover:text-primary-100">Pricing</a>
+                <a href="" aria-label="Products" class="sm:mt-1 hover:text-primary-100">Products</a>
+                <a href="" aria-label="About Us" class="sm:mt-1 hover:text-primary-100">About Us</a>
+            </div>
+            <div class="flex flex-col text-neutral-400">
+                <a href="" aria-label="Careers" class="hover:text-primary-100">Careers </a>
+                <a href="" aria-label="Community" class="sm:mt-1 hover:text-primary-100">Community</a>
+                <a href="" aria-label="Privacy Policy" class="sm:mt-1 hover:text-primary-100">Privacy Policy</a>
+            </div>
+        </div>
+        <div>
+            <form class="flex justify-between items-center w-full px-3 sm:p-0 sm:justify-end sm:my-10 sm:ml-32">
+                <label for="email" class="flex flex-col justify-center items-center">
+                    <input type="email" name="email" placeholder="Updates in your inbox..."
+                        class="email px-2 placeholder-neutral-200 rounded-full text-base w-48 h-10 sm:w-56 sm:text-center">
+                    <p id="error" class="text-primary-100 text-base hidden">Please insert a valid email</p>
+                </label>
+                <button
+                    class="btn bg-primary-100 w-20 h-10 p-1 rounded-full text-neutral-400 font-semibold text-base my-5 shadow-2xl sm:ml-8 sm:mr-40 hover:bg-red-400">
+                    <a href="" aria-label="Go button">Go</a>
+                </button>
+            </form>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            //mobile nav
+            $(".ham").click(function () {
+                $("nav").children("div").toggleClass("hidden");
+                $(".close").children("div").toggleClass("hidden");
+            });
+
+            $(".close").click(function () {
+                if ($("nav").children("div").hasClass("hidden")) {
+                    $("nav").children("div").removeClass("hidden");
+                } else {
+                    $("nav").children("div").addClass("hidden");
+                }
+            });
+
+            //email validation
+            $(".btn").click(function (e) {
+                const regex = /[a-zA-Z]+[1-9]*[@]{1}[a-z]+[.]{1}[a-z]/;
+                let email = $(".email").val();
+                const error = $("#error");
+
+                if (!regex.test(email)) {
+                    $(".email").css("border", "2px solid hsl(0, 94%, 66%)");
+                    $("#error").css("display", "block");
+                    $(".email").focus();
+                } else {
+                    $("#error").css("display", "none");
+                    $(".email").css("border", "none");
+                    $(".email").focus();
+                }
+                e.preventDefault();
+            });
+        });
+        //sliders
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "flex";
+            dots[slideIndex - 1].className += " active";
+        };
+
+
+
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+                //sliders
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "flex";
+            dots[slideIndex - 1].className += " active";
+        };
+            } else {
+                $(".dot").css("display", "none");
+                $(".mySlides").css("display", "flex");
+                $(".next").css("display", "none");
+                $(".prev").css("display", "none");
+            }
+        }
+
+        var x = window.matchMedia("(min-width: 640px)")
+        myFunction(x) // Call listener function at run time
+        x.addListener(myFunction) // Attach listener function on state changes 
+    </script>
+</body>
+
+</html>
