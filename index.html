@@ -24,6 +24,10 @@
         font-family: 'Karla', sans-serif;
     }
 
+    #error {
+        margin-right: 18rem;
+    }
+
     .dot {
         cursor: pointer;
         height: 15px;
@@ -267,9 +271,10 @@
             <form class="flex justify-between items-center w-full px-3 sm:p-0 sm:justify-end sm:my-10 sm:ml-32">
                 <label for="email" class="flex flex-col justify-center items-center">
                     <input type="email" name="email" placeholder="Updates in your inbox..."
-                        class="email px-2 placeholder-neutral-200 rounded-full text-base w-48 h-10 sm:w-56 sm:text-center">
-                    <p id="error" class="text-primary-100 text-base hidden">Please insert a valid email</p>
+                        class="email px-2 placeholder-neutral-200 rounded-full text-base w-48 h-10 sm:w-56 sm:text-center"
+                        id="email">
                 </label>
+                <p id="error" class="text-primary-100 text-base hidden absolute mt-16">Please insert a valid email</p>
                 <button aria-label="Go button"
                     class="btn bg-primary-100 w-20 h-10 p-1 rounded-full text-neutral-400 font-semibold text-base my-5 shadow-2xl sm:ml-8 sm:mr-40 hover:bg-red-400">
                     Go
