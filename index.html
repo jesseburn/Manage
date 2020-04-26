@@ -23,6 +23,7 @@
         overflow-x: hidden;
         font-family: 'Karla', sans-serif;
     }
+
     .dot {
         cursor: pointer;
         height: 15px;
@@ -85,10 +86,11 @@
                 <a href="" aria-label="Community" class="mt-2 sm:m-0 hover:text-neutral-100">Community</a>
             </div>
             <img src="./images/icon-hamburger.svg" alt="mobile nav open" aria-label="mobile nav" class="sm:hidden ham">
-            <img src="./images/icon-close.svg" alt="mobile nav close" aria-label="mobile nav close" class="hidden close">
-            <button
+            <img src="./images/icon-close.svg" alt="mobile nav close" aria-label="mobile nav close"
+                class="hidden close">
+            <button aria-label="Get Started"
                 class="hidden sm:block sm:w-32 sm:bg-primary-100 sm:p-2 sm:rounded-full sm:text-base sm:text-neutral-400 sm:shadow-2xl hover:bg-red-400">
-                <a href="" aria-label="Get Started">Get Started</a>
+                Get Started
             </button>
         </nav>
     </header>
@@ -101,9 +103,9 @@
                 software teams to plan day-to-day tasks while keeping the larger
                 team goals in view.
             </p>
-            <button
+            <button aria-label="Get Started"
                 class="bg-primary-100 w-32 h-12 p-2 rounded-full text-base text-neutral-400 my-5 shadow-2xl sm:ml-24 hover:bg-red-400">
-                <a href="" aria-label="Get Started">Get Started</a>
+                Get Started
             </button>
         </div>
         <div class="p-2 w-full object-cover object-center sm:w-1/2">
@@ -217,18 +219,18 @@
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
         </div>
-        <button
+        <button aria-label="Get Started"
             class="bg-primary-100 w-32 h-12 p-2 rounded-full text-base text-neutral-400 my-5 shadow-2xl hover:bg-red-400">
-            <a href="" aria-label="Get Started">Get Started</a>
+            Get Started
         </button>
     </section>
     <section
         class="flex flex-col justify-center items-center py-10 mt-3 bg-primary-100 text-neutral-400 sm:flex-row sm:justify-around">
         <h1 class="text-4xl font-semibold text-center px-4 sm:w-1/3 sm:text-left sm:font-bold">Simplify how your team
             works today.</h1>
-        <button
+        <button aria-label="Get Started"
             class="bg-neutral-400 w-32 h-12 p-2 rounded-full text-primary-100 font-semibold text-base my-5 shadow-2xl hover:text-red-400">
-            <a href="" aria-label="Get Started">Get Started</a>
+            Get Started
         </button>
     </section>
     <footer class="bg-neutral-200 py-4 flex flex-col-reverse sm:flex-row sm:justify-evenly sm:items-center sm:p-4">
@@ -268,9 +270,9 @@
                         class="email px-2 placeholder-neutral-200 rounded-full text-base w-48 h-10 sm:w-56 sm:text-center">
                     <p id="error" class="text-primary-100 text-base hidden">Please insert a valid email</p>
                 </label>
-                <button
+                <button aria-label="Go button"
                     class="btn bg-primary-100 w-20 h-10 p-1 rounded-full text-neutral-400 font-semibold text-base my-5 shadow-2xl sm:ml-8 sm:mr-40 hover:bg-red-400">
-                    <a href="" aria-label="Go button">Go</a>
+                    Go
                 </button>
             </form>
         </div>
@@ -345,34 +347,34 @@
         function myFunction(x) {
             if (x.matches) { // If media query matches
                 //sliders
-        var slideIndex = 1;
-        showSlides(slideIndex);
+                var slideIndex = 1;
+                showSlides(slideIndex);
 
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
+                // Next/previous controls
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
 
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
+                // Thumbnail image controls
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
 
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "flex";
-            dots[slideIndex - 1].className += " active";
-        };
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "flex";
+                    dots[slideIndex - 1].className += " active";
+                };
             } else {
                 $(".dot").css("display", "none");
                 $(".mySlides").css("display", "flex");
