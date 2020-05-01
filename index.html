@@ -299,13 +299,17 @@
             //mobile nav
             $(".ham").click(function () {
                 $("nav").children("div").toggleClass("hidden");
-                $(".close").children("div").toggleClass("hidden");
+                $(".close").toggleClass("hidden");
+                $(".ham").toggleClass("hidden");
             });
 
             $(".close").click(function () {
                 if ($("nav").children("div").hasClass("hidden")) {
+
                     $("nav").children("div").removeClass("hidden");
                 } else {
+                    $(".close").toggleClass("hidden");
+                    $(".ham").toggleClass("hidden");
                     $("nav").children("div").addClass("hidden");
                 }
             });
